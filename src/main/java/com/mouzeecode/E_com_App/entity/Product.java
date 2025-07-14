@@ -16,7 +16,9 @@
         private String imageUrl;
         private Double price;
 
-        @ManyToOne
-        @JoinColumn(name = "category_id", nullable =false)
+        @ManyToOne(fetch = FetchType.LAZY)
+        @JoinColumn(name = "category_id", nullable = false)
+        @com.fasterxml.jackson.annotation.JsonBackReference
         private Category category;
+
     }

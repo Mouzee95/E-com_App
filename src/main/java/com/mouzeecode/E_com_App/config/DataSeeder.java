@@ -34,6 +34,11 @@ public class DataSeeder implements CommandLineRunner {
 
         Category car = new Category();
         car.setName("van");
+
+
+//        Category sportCar = new Category();
+//        car.setName("sportCar");
+
 //            car=categoryRepo.save(car);
 
         categoryRepo.saveAll(Arrays.asList(gadgets, car));
@@ -49,7 +54,7 @@ public class DataSeeder implements CommandLineRunner {
 
         Product van = new Product();
         van.setName("Izuzu");
-        van.setDescription("Single can Dmax with diesel fuel consumption");
+        van.setDescription("Single cab Dmax with diesel fuel consumption");
         van.setImageUrl("https://placehold.co/600x400");
         van.setPrice(340000.98);
         van.setCategory(car);
@@ -61,6 +66,6 @@ public class DataSeeder implements CommandLineRunner {
         sportCar.setPrice(340000.98);
         sportCar.setCategory(car);
 
-        productRepo.saveAll(Arrays.asList(laptop, van));
+        productRepo.saveAll(Arrays.asList(laptop, van, sportCar));
     }
 }
